@@ -31,7 +31,7 @@ class App extends Component {
             </ul>
           </nav>
         </div>
-        <h2>Простая демонстрация роутинга. Основной контент - на странице <NavLink to="/cats">Cats</NavLink></h2>}
+
         <Route path="/" exact render={() => <h2>Простая демонстрация роутинга. Основной контент - на странице <NavLink to="/cats">Cats</NavLink></h2>} />
         <Route path="/about" component={About} />
         <Route path="/cats" component={Main} />
