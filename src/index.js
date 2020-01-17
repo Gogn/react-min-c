@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {StyleRoot} from "radium";
 
-ReactDOM.render(<App title={'I am from props!'}/>, document.getElementById('root'));
+ReactDOM.render(<StyleRoot><App title={'I am from props!'}/></StyleRoot>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

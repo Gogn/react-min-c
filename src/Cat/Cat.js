@@ -1,45 +1,50 @@
 import React from 'react';
-import Radium from "radium";
-import './Cat.css'
+import PropTypes from 'prop-types';
+import classes from './Cat.module.css';
+import withClass from '../hos/withClass';
 
-const Cat = props => {
-    const inputClasses = ['input']
+class Cat extends React.Component {
 
-    const style = {
-        border: '1px solid #ccc',
-        boxShadow: '0 4px 5px 0 rgba(0,0,0, .14)',
-        ':hover': {
-            border: '1px solid #aaa',
-            boxShadow: '0 4px 15px 0 rgba(0,0,0, .25)',
-            cursor: 'pointer'
-        }
-    }
-
-    if (props.name) {
-        inputClasses.push('green')
-    } else {
-        inputClasses.push('red')
-    }
-
-    // if (props.name.length>4){
-    //     inputClasses.push('bold')
+  render() {
+    // componentDidMount() {
+    //     this.inputRef.focus
     // }
 
+    const inputClasses = [classes.input]
+
+    if (this.props.name) {
+      inputClasses.push(classes.green)
+    } else {
+      inputClasses.push(classes.red)
+    }
+
+    if (this.props.name.length > 4) {
+      inputClasses.push(classes.bold)
+    }
+
     return (
-        <div className="Cat" style={style}>
-            <h3>Cat name: {props.name}</h3>
-            <p>Born in: {props.born}</p>
-            {props.children}
-            <input
-                type="text"
-                onChange={props.onChangeName}
-                value={props.name}
-                className={inputClasses.join(' ')}
-                //className="input green bold red"
-            />
-            <button onClick={props.onDelete}>Delete</button>
-        </div>
+      <React.Fragment>
+        <h3>Cat name: {this.props.name}</h3>
+        <p>Born in: {this.props.born}</p>
+        {this.props.children}
+        <input
+          type="text"
+          onChange={this.props.onChangeName}
+          value={this.props.name}
+          className={inputClasses.join(' ')}
+          //className="input green bold red"
+        />
+        <button onClick={this.props.onDelete}>Delete</button>
+      </React.Fragment>
     )
+  }
 }
 
-export default Radium(Cat)
+Cat.propTypes = {
+  name: PropTypes.string.isRequired,
+  born: PropTypes.number.isRequired,
+  onChangeName: PropTypes.func,
+  onDelete: PropTypes.func,
+};
+
+export default withClass(Cat, classes.Cat)

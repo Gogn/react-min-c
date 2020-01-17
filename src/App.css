@@ -1,5 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: linear-gradient(white, #f5f2f6);
+  height: auto;
+  min-height: 100vh;
+
+}
+
 .App {
   text-align: center;
+  height: auto;
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -16,7 +34,6 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -35,4 +52,107 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.h1 {
+  margin-top: 2em;
+  margin-bottom: 0px;
+  transition: border, box-shadow .3s;
+  width: 100%;
+}
+
+.Btn {
+  font-size: 1em;
+  width: 150px;
+  height: 40px;
+  padding: 0px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px #a19ea2;
+  margin: 20px 20px 5px;
+  background-color: white;
+}
+
+.Btn:hover{
+  background-color: yellow;
+}
+
+.Btn:focus{
+  color: black;
+}
+
+
+
+.nav{
+  height: auto;
+  width: auto;
+  background-color: #f5f2f6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  padding: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav ul li{
+  list-style-type: none;
+}
+
+
+.extra {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.extra h2 {
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+.extra hr {
+  border: none;
+  border-bottom: 1px solid;
+  color: #ccc;
+}
+
+
+.AddCat{
+  width: 400px;
+  margin-top: 0.5em;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.AddCat input {
+  height: 25px;
+  border-radius: 10px;
+}
+
+.AddCat button {
+  margin: 0;
+}
+
+.Btn_counter {
+  font-size: 1em;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0px 20px 20px;
+  background-color: white;
 }

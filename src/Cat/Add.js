@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from "radium";
-import './Cat.css'
+import './Cat.module.css'
 
 const Cat = props => {
     const inputClasses = ['input']

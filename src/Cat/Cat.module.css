@@ -3,9 +3,18 @@
     display: block;
     padding: 10px;
     transition: border, box-shadow .3s;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0, .14);
 }
 
-.input {}
+.Cat:hover {
+    border: 1px solid #aaa;
+    box-shadow: 0 4px 15px 0 rgba(0,0,0, .25);
+    cursor: pointer;
+}
+
+.input {
+}
 
 .input:active, input:focus {
     outline: none;
