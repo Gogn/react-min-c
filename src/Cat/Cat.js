@@ -6,9 +6,6 @@ import withClass from '../hos/withClass';
 class Cat extends React.Component {
 
   render() {
-    // componentDidMount() {
-    //     this.inputRef.focus
-    // }
 
     const inputClasses = [classes.input]
 
@@ -20,6 +17,7 @@ class Cat extends React.Component {
 
     if (this.props.name.length > 4) {
       inputClasses.push(classes.bold)
+    } else {
     }
 
     return (
