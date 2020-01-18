@@ -47,7 +47,7 @@ class App extends Component {
           </nav>
         </div>
 
-        <Route path="/react-min-c/" exact render={() => <h2>Простая демонстрация роутинга. Основной контент -- на странице <NavLink to="/cats">Cats</NavLink></h2>} />
+        <Route path="/react-min-c/" exact render={() => <h2>Простая демонстрация роутинга. Основной контент -- на странице <NavLink to="/react-min-c/cats">Cats</NavLink></h2>} />
         <Route path="/react-min-c/about" component={About} />
         <Route path="/react-min-c/cats" component={Main} />
       </React.Fragment>
