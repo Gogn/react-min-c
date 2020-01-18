@@ -5,98 +5,10 @@ body {
   background: linear-gradient(white, #f5f2f6);
   height: auto;
   min-height: 100vh;
-
 }
 
-.App {
-  text-align: center;
-  height: auto;
-  width: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.h1 {
-  margin-top: 2em;
-  margin-bottom: 0px;
-  transition: border, box-shadow .3s;
-  width: 100%;
-}
-
-.Btn {
-  font-size: 1em;
-  width: 150px;
-  height: 40px;
-  padding: 0px;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0px 1px 1px #a19ea2;
-  margin: 20px 20px 5px;
-  background-color: white;
-}
-
-.Btn:hover{
-  background-color: yellow;
-}
-
-.Btn:focus{
-  color: black;
-}
-
-
-
-.nav{
-  height: auto;
-  width: auto;
-  /*background-color: #f5f2f6;*/
-  border-bottom: 1px solid;
-  color: #ccc;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0, .14);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav ul {
+.nav
+ul {
   padding: 0;
   width: 100%;
 
@@ -104,58 +16,11 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-
-.nav ul li{
+li {
   list-style-type: none;
 }
 
-
-.extra {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.extra h2 {
-  margin-top: 1em;
-  margin-bottom: 0em;
-}
-
-.extra hr {
-  border: none;
-  border-bottom: 1px solid;
-  color: #ccc;
-}
-
-
-.AddCat{
-  width: 400px;
-  margin-top: 0.5em;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.AddCat input {
-  height: 25px;
-  border-radius: 10px;
-}
-
-.AddCat button {
-  margin: 0;
-}
-
-.Btn_counter {
-  font-size: 1em;
-  width: 40px;
-  height: 40px;
-  padding: 0px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 10px;
-  margin: 0px 20px 20px;
-  background-color: white;
+.active {
+  font-weight: bold;
+  color: red;
 }

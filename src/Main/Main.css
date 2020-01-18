@@ -1,13 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-  background: linear-gradient(white, #f5f2f6);
-  height: auto;
-  min-height: 100vh;
-
-}
-
 .App {
   text-align: center;
   height: auto;
@@ -74,8 +64,7 @@ body {
 }
 
 .Btn:hover{
-  background-color: yellow;
-}
+  background: linear-gradient(90deg, rgba(231,253,255,0.7) 0%, rgba(244,221,255,0.7) 100%); }
 
 .Btn:focus{
   color: black;
@@ -95,20 +84,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.nav ul {
-  padding: 0;
-  width: 100%;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nav ul li{
-  list-style-type: none;
-}
-
 
 .extra {
   display: flex;
@@ -141,6 +116,12 @@ body {
 .AddCat input {
   height: 25px;
   border-radius: 10px;
+}
+
+.AddCat input:focus {
+  height: 25px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(231,253,255,0.7) 0%, rgba(244,221,255,0.7) 100%);
 }
 
 .AddCat button {

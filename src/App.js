@@ -17,24 +17,39 @@ class App extends Component {
       <React.Fragment>
 
         <div>
-          <nav className={"nav"}>
+          <nav className="nav">
             <ul>
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink
+                  exact
+                  to="/react-min-c/"
+                  activeClassName="active"
+                >Home</NavLink>
               </li>
               <li>
-                <NavLink to="/cats">Cats</NavLink>
+                <NavLink
+                  exact
+                  to="/react-min-c/cats"
+                  // activeStyle={{color: 'blue'}} // inline
+                >Cats</NavLink>
               </li>
               <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink
+                  exact
+                  to={{
+                    pathname: '/react-min-c/about',
+                    // search: '?a=1&b=2',
+                    // hash: 'active-hash'
+                  }}
+                >About</NavLink>
               </li>
             </ul>
           </nav>
         </div>
 
-        <Route path="/" exact render={() => <h2>Простая демонстрация роутинга. Основной контент -- на странице <NavLink to="/cats">Cats</NavLink></h2>} />
-        <Route path="/about" component={About} />
-        <Route path="/cats" component={Main} />
+        <Route path="/react-min-c/" exact render={() => <h2>Простая демонстрация роутинга. Основной контент -- на странице <NavLink to="/cats">Cats</NavLink></h2>} />
+        <Route path="/react-min-c/about" component={About} />
+        <Route path="/react-min-c/cats" component={Main} />
       </React.Fragment>
     );
   }
