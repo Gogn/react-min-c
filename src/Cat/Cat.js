@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classes from './Cat.module.css';
 import withClass from '../hos/withClass';
+import {withRouter} from 'react-router-dom'
 
 class Cat extends React.Component {
 
   render() {
+//console.log(this.props)
 
     const inputClasses = [classes.input]
 
@@ -21,7 +23,10 @@ class Cat extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <div
+        className={'Cat'}
+        onClick={() => this.props.history.push('/react-min-c/catslist/' + this.props.name.toLowerCase())} // Отправка имени в урл для передачи в компонент CatDetail и отображения карточки
+      >
         <h3>Cat name: {this.props.name}</h3>
         <p>Born in: {this.props.born}</p>
         {this.props.children}
@@ -33,7 +38,7 @@ class Cat extends React.Component {
           //className="input green bold red"
         />
         <button onClick={this.props.onDelete}>Delete</button>
-      </React.Fragment>
+      </div>
     )
   }
 }
@@ -45,4 +50,4 @@ Cat.propTypes = {
   onDelete: PropTypes.func,
 };
 
-export default withClass(Cat, classes.Cat)
+export default withRouter(withClass(Cat, classes.Cat))

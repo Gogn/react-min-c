@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route, NavLink} from 'react-router-dom'
+import {Route, NavLink, Switch} from 'react-router-dom'
 import './App.css';
 import Cat from './Cat/Cat.js';
 import Counter from './Counter/Counter.js';
@@ -8,6 +8,7 @@ import {bounce} from 'react-animations';
 import Extra from './Extra/Extra';
 import About from './About/About'
 import Main from './Main/Main.js'
+import CatDetail from "./CatDetail/CatDetail"
 
 class App extends Component {
 
@@ -47,9 +48,15 @@ class App extends Component {
           </nav>
         </div>
 
-        <Route path="/react-min-c/" exact render={() => <h2>Простая демонстрация роутинга. Основной контент -- на странице <NavLink to="/react-min-c/cats">Cats</NavLink></h2>} />
-        <Route path="/react-min-c/about" component={About} />
-        <Route path="/react-min-c/cats" component={Main} />
+        <Switch>
+          <Route path="/react-min-c/" exact
+                 render={() => <h2>Простая демонстрация роутинга. Основной контент -- на странице <NavLink
+                   to="/react-min-c/cats">Cats</NavLink></h2>}/>
+          <Route path="/react-min-c/about" component={About}/>
+          <Route path="/react-min-c/catslist/:name" component={CatDetail}/>
+          <Route path="/react-min-c/cats" component={Main}/>
+        </Switch>
+
       </React.Fragment>
     );
   }

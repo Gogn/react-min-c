@@ -1,0 +1,18 @@
+.Btn {
+  font-size: 1em;
+  width: 150px;
+  height: 40px;
+  padding: 0px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px #a19ea2;
+  margin: 20px 20px 5px;
+  background-color: white;
+}
+
+.Btn:hover{
+  background: linear-gradient(90deg, rgba(231,253,255,0.7) 0%, rgba(244,221,255,0.7) 100%); }
+
+.Btn:focus{
+  color: black;
+}
