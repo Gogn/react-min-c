@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route, NavLink, Switch} from 'react-router-dom'
+import {Route, NavLink, Switch, Redirect} from 'react-router-dom'
 import './App.css';
 import Cat from './Cat/Cat.js';
 import Counter from './Counter/Counter.js';
@@ -55,6 +55,8 @@ class App extends Component {
           <Route path="/react-min-c/about" component={About}/>
           <Route path="/react-min-c/catslist/:name" component={CatDetail}/>
           <Route path="/react-min-c/cats" component={Main}/>
+          {/*<Redirect to={'/react-min-c/'}/>*/}
+          <Route render={() => <h1 style={{color: 'red', textAlign: 'center' }}>404 not found</h1> }/>
         </Switch>
 
       </React.Fragment>
