@@ -7,8 +7,10 @@ export default class CatDetail extends React.Component {
        <div style={{
          textAlign: 'center'
        }}>
-         {console.log(this.props)}
-         <h1>{this.props.match.params.name}</h1>
+         <div>
+         <h1>Cat name: {this.props.match.params.name}</h1>
+         {/*<h2>Born in: {this.props.match.params.born}</h2>*/}
+       </div>
        </div>
      )
 

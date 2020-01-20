@@ -25,11 +25,11 @@ class Cat extends React.Component {
     return (
       <div
         className={'Cat'}
-        onClick={() => this.props.history.push('/react-min-c/catslist/' + this.props.name.toLowerCase())} // Отправка имени в урл для передачи в компонент CatDetail и отображения карточки
+        onClick={() => this.props.history.push('/react-min-c/catdetail/' + this.props.name.toLowerCase())} // Отправка имени в урл для передачи в компонент CatDetail и отображения карточки
       >
         <h3>Cat name: {this.props.name}</h3>
         <p>Born in: {this.props.born}</p>
-        {this.props.children}
+        {/*{this.props.children}*/}
         <input
           type="text"
           onChange={this.props.onChangeName}
