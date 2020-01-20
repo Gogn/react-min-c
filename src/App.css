@@ -7,8 +7,19 @@ body {
   min-height: 100vh;
 }
 
-.nav
-ul {
+.nav{
+  height: 60px;
+  width: auto;
+  border-bottom: 1px solid;
+  color: #ccc;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0, .14);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
   padding: 0;
   width: 100%;
 
@@ -16,11 +27,43 @@ ul {
   justify-content: space-around;
   align-items: center;
 }
-li {
+nav li {
   list-style-type: none;
 }
 
 .active {
   font-weight: bold;
   color: red;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid;
+  color: #ccc;
+}
+
+button {
+  font-size: 1em;
+  width: 150px;
+  height: 40px;
+  padding: 0px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px #a19ea2;
+  margin: 1em 1em 1em;
+  background-color: white;
+}
+
+button:hover{
+  background: linear-gradient(90deg, rgba(231,253,255,0.7) 0%, rgba(244,221,255,0.7) 100%); }
+
+button:focus{
+  color: black;
+}
+
+.auth {
+  text-align: center;
+
+  display: flex;
 }

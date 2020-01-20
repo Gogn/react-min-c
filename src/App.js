@@ -12,6 +12,10 @@ import CatDetail from "./CatDetail/CatDetail"
 
 class App extends Component {
 
+  state = {
+    isLoggenIn: false
+  }
+
   render() {
 
     return (
@@ -45,18 +49,26 @@ class App extends Component {
                 >About</NavLink>
               </li>
             </ul>
+          <div className={'auth'}>
+            <h3>Is logged in: {this.state.isLoggenIn ? 'TRUE' : 'FALSE'}</h3>
+            <button onClick={() => this.setState({isLoggenIn: !this.state.isLoggenIn})}>Login</button>
+          </div>
           </nav>
         </div>
 
         <Switch>
           <Route path="/react-min-c/" exact
-                 render={() => <h2>Простая демонстрация роутинга. Основной контент -- на странице <NavLink
+                 render={() => <h2>Простая демонстрация роутинга. Основной контент на странице <NavLink
                    to="/react-min-c/cats">Cats</NavLink></h2>}/>
-          <Route path="/react-min-c/about" component={About}/>
+
+          {/*//Рендеринг страница About только для авторизованных*/}
+          { this.state.isLoggenIn ? <Route path="/react-min-c/about" component={About}/> : null }
+
+
           <Route path="/react-min-c/catslist/:name" component={CatDetail}/>
           <Route path="/react-min-c/cats" component={Main}/>
           {/*<Redirect to={'/react-min-c/'}/>*/}
-          <Route render={() => <h1 style={{color: 'red', textAlign: 'center' }}>404 not found</h1> }/>
+          <Route render={() => <h1 style={{color: 'red', textAlign: 'center'}}>404 not found</h1>}/>
         </Switch>
 
       </React.Fragment>

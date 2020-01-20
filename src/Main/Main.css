@@ -70,21 +70,6 @@
   color: black;
 }
 
-
-
-.nav{
-  height: auto;
-  width: auto;
-  /*background-color: #f5f2f6;*/
-  border-bottom: 1px solid;
-  color: #ccc;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0, .14);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .extra {
   display: flex;
   flex-direction: row;
