@@ -5,7 +5,7 @@ class About extends React.Component {
 
   goToHomePage = () => {
     this.props.history.push({
-      pathname: '/'
+      pathname: '/react-min-c/'
     })
   }
 
